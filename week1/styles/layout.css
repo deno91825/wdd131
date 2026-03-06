@@ -4,7 +4,9 @@
 }
 
 
-
+body{
+    grid-template: auto 1fr auto / auto 1fr;
+}
 #head-section{
     background-color: #333;
     color: #fff;
@@ -27,7 +29,7 @@ nav ul{
     display: grid;
     grid-template-columns: 60% 40%;
     height: 50vh;
-}
+} 
 
 #main-content{
     background-color: #7e7a7a;
