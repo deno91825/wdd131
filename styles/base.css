@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     background-color: #f9f9f9;
@@ -17,6 +17,8 @@ body{
 #course-title{
     display: block;
     background-color: rgb(89, 89, 156);
+    font-size: 30px;
+    text-align: center;
 }
 
 nav{
@@ -37,6 +39,15 @@ nav a{
     color: beige;
     transition: color  0.5s;
 }
+header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
 
 nav a:hover{
     color: aqua;
@@ -56,17 +67,17 @@ main h1{
     height: 60vh;
     gap: 30px;
 }
-#card{
+.card{
     margin-top: 20px;
     background-color: antiquewhite;
     border-radius: 5%;
     position: relative;
 }
-#card h2{
+.card h2{
     background-color: rgb(89, 89, 156);
     text-align: center;
 }
-#card h3{
+.card h3{
     border-bottom:1px solid #333;
     text-align: center;
 }
@@ -88,13 +99,13 @@ main h1{
     margin: 20px;
 }
 
-#card ul li a{
+.card ul li a{
     text-decoration: none;
 }
-#card ul li{
+.card ul li{
     list-style-type: none;
 }
-#card ul{
+.card ul{
     text-align: center;
     
 }
@@ -104,5 +115,5 @@ footer{
     color: #f9f9f9;
     text-align: center;
     height: auto;
-    margin-top: 50px;
+    margin-top: 80px;
 }
