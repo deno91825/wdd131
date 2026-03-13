@@ -22,6 +22,11 @@ header {
   padding: 1rem;
   background-color: aquamarine;
 }
+nav {
+  display: flex;               
+  justify-content: flex-end;   
+  align-items: center;         
+}
 
 .logo {
   font-size: 1.8em;
@@ -51,6 +56,13 @@ header {
   right: 0;
   width: 200px;
   border: 1px solid #ccc;
+}
+
+.navigation a:hover {
+  background-color: #333; 
+  color: #fff;           
+  border-radius: 4px;     
+  transition: 0.3s ease;  
 }
 
 .navigation li {
