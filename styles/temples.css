@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #1a1818;
+  padding: 1em;
+}
+
+
+header {
+  position: sticky;  
+  top: 0;             
+  z-index: 1000;     
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: aquamarine;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+
+#menu::before {
+  content: "☰";
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#menu.open::before {
+  content: "❌";
+}
+
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  background-color: #eee;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+
+.navigation.active {
+  display: flex;
+}
+
+
+.temple-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+figure {
+  text-align: center;
+}
+main { 
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color:aquamarine;
+  background-color: black;
+}
+
+
+footer {
+  position: fixed;   
+  bottom: 0;           
+  left: 0;
+  width: 100%;      
+  background-color: aquamarine;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;      
+}
+
+
+main h1 {
+  text-align: center;
+  padding: 1rem;
+}
