@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+
+  /* Layout spacing */
+  section {
+    margin: 1.5rem;
+    padding: 1.5rem;
+
+  }
+  section h2{
+    color: var(--white);
+    background-color: var(--red);
+    height: 50px;
+    text-align: center
+  }
+
+  /* Weather icon using pseudo-element */
+  #weather-title::after {
+    content: " ⛅";
+    color: var(--yellow);
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  /* ABOUT (TOP LEFT) */
+  .about {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+  }
+
+  /* WEATHER (BOTTOM RIGHT) */
+  .weather {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+  }
+    .weather-icon {
+    display: none;
+  }
+
+  /* Improve readability on image */
+  .about, .weather {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}

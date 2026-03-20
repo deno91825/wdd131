@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the psychedelic sounds and visuals of Temples through their official album site.">
+    <meta name="author" content="Oweki Denis">
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Font Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Uganda</title>
+</head>
+
+<body>
+
+<header>
+  <h1>Uganda - The Pearl of Africa</h1>
+</header>
+
+<main>
+
+  <!-- HERO CONTAINER -->
+  <div class="hero">
+
+    <!-- HERO IMAGE -->
+    <picture>
+      <source srcset="images/week3_img-large.webp" media="(min-width: 768px)">
+      <source srcset="images/week3_img-large.webp" media="(min-width: 530px)">
+      <img src="images/week3_img.webp" alt="Beautiful people of Uganda">
+    </picture>
+
+    <!-- ABOUT (TOP LEFT ON LARGE SCREENS) -->
+<section class="about">
+  <h2>About Uganda</h2>
+
+  <div class="info">
+    <p><span>Official Name:</span> Republic of Uganda</p>
+    <p><span>Capital City:</span> Kampala</p>
+    <p><span>Population:</span> ~48 million</p>
+    <p><span>Area:</span> 241,038 km²</p>
+    <p><span>Official Languages:</span> English, Swahili</p>
+    <p><span>Major Tribes:</span> Baganda, Banyankole, Basoga, Bakiga, Iteso</p>
+    <p><span>Currency:</span> Ugandan Shilling (UGX)</p>
+    <p><span>Climate:</span> Tropical and warm year-round</p>
+    <p><span>Famous For:</span> Source of the Nile, mountain gorillas</p>
+  </div>
+</section>
+
+    <!-- WEATHER (BOTTOM RIGHT ON LARGE SCREENS) -->
+    <section class="weather">
+      <h2 id="weather-title">Weather</h2>
+      <img src="images/weather.svg" alt="weather icon" class="weather-icon">
+
+      <p>Temperature: <span id="temp"></span> °C</p>
+      <p>Wind Speed: <span id="wind"></span> km/h</p>
+      <p>Wind Chill: <span id="windchill"></span></p>
+
+      
+    </section>
+
+  </div>
+
+</main>
+
+    <footer>
+        <p><span id="currentyear"></span> Oweki Denis, Uganda</p>
+        <p>
+        <span id="last">Last modified:</span>
+        <span id="lastmodified"></span>
+        </p>
+    </footer>
+
+</body>
+</html>
