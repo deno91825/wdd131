@@ -1,16 +1,15 @@
+/* Responsive Grid */
 @media (min-width: 366px) {
   .temple-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Medium/large screens: 3 columns */
 @media (min-width: 768px) {
   .temple-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Desktop nav adjustments */
   #menu {
     display: none;
   }
