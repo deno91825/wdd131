@@ -1,8 +1,8 @@
-// Footer year & last modified
+// Footer
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastmodified").textContent = document.lastModified;
 
-// Hamburger menu toggle
+// Menu toggle
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
@@ -11,7 +11,7 @@ hamButton.addEventListener("click", () => {
   navigation.classList.toggle("active");
 });
 
-// Temple data
+// Temple Data
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -43,7 +43,7 @@ const temples = [
   },
   {
     templeName: "Washington D.C.",
-    location: "Kensington, Maryland, United States",
+    location: "Maryland, USA",
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
@@ -64,39 +64,50 @@ const temples = [
   },
   {
     templeName:"Managua Nicaragua",
-    location:"Highway to Masaya Managua",
+    location:"Managua, Nicaragua",
     dedicated:"26 November 2022",
     area:2323,
-    imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/managua-nicaragua-temple/managua-nicaragua-temple-69285.jpg"
+    imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-69078.jpg"
   },
   {
     templeName: "Manila Philippines",
-    location: "Quezon City, Metro Manila Philippines",
+    location: "Manila, Philippines",
     dedicated: "25 August 1982",
     area: 2479,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/manila-philippines-temple/manila-philippines-temple-44348.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-69095.jpg"
+  },
+  {
+    templeName: "Salt Lake Temple",
+    location: "Utah, USA",
+    dedicated: "1893, April, 6",
+    area: 253000,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-69075.jpg"
   }
 ];
 
-// Function to create temple cards
-function displayTemples(templeArray) {
-    const gallery = document.querySelector(".temple-gallery");
-    gallery.innerHTML = "";
-    templeArray.forEach(temple => {
-            // inside displayTemples()
+// Extract year correctly
+function getYear(dateString) {
+  const match = dateString.match(/\d{4}/);
+  return match ? parseInt(match[0]) : 0;
+}
+
+// Display function
+function displayTemples(list) {
+  const gallery = document.querySelector(".temple-gallery");
+  gallery.innerHTML = "";
+
+  list.forEach(temple => {
     const figure = document.createElement("figure");
 
-    // Create caption first
     const caption = document.createElement("figcaption");
+    caption.classList.add("temple-caption");
     caption.innerHTML = `
-        <strong>${temple.templeName}</strong><br>
-        ${temple.location}<br>
-        Dedicated: ${temple.dedicated}<br>
-        Area: ${temple.area.toLocaleString()} sq ft
+      <strong>${temple.templeName}</strong><br>
+      ${temple.location}<br>
+      Dedicated: ${temple.dedicated}<br>
+      Area: ${temple.area.toLocaleString()} sq ft
     `;
-    caption.classList.add("temple-caption"); // optional for styling
 
-    // Then image
     const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
@@ -105,29 +116,35 @@ function displayTemples(templeArray) {
     figure.appendChild(caption);
     figure.appendChild(img);
     gallery.appendChild(figure);
-    });
+  });
 }
 
-// Initial display
+// Initial load
 displayTemples(temples);
 
-// Navigation filters
+// Filters
 document.querySelectorAll(".navigation a").forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        const filter = link.textContent.toLowerCase();
-        let filteredTemples = temples;
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const filter = link.textContent.toLowerCase();
+    let result = temples;
 
-        if(filter === "old") {
-            filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
-        } else if(filter === "new") {
-            filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
-        } else if(filter === "large") {
-            filteredTemples = temples.filter(t => t.area > 90000);
-        } else if(filter === "small") {
-            filteredTemples = temples.filter(t => t.area < 10000);
-        }
+    if (filter === "old") {
+      result = temples.filter(t => getYear(t.dedicated) < 1900);
+    } 
+    else if (filter === "new") {
+      result = temples.filter(t => getYear(t.dedicated) > 2000);
+    } 
+    else if (filter === "large") {
+      result = temples.filter(t => t.area > 90000);
+    } 
+    else if (filter === "small") {
+      result = temples.filter(t => t.area < 10000);
+    }
 
-        displayTemples(filteredTemples);
-    });
+    displayTemples(result);
+
+    navigation.classList.remove("active");
+    hamButton.classList.remove("open");
+  });
 });
