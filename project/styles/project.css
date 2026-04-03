@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+
+header {
+    background: #800000;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-mobile {
+    display: none;
+    background: #800000;
+}
+
+.nav-mobile ul {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nav-mobile.show {
+    display: block;
+}
+
+
+main {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card.alt {
+    background: #800000;
+    color: white;
+    transform: skew(-2deg);
+}
+.wireframe-box {
+    display: flex;
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-sidebar {
+    background: #800000;
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+}
+
+.main {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    background: #555;
+    height: 100px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.bottom {
+    display: flex;
+    gap: 10px;
+}
+
+.contact, .welcome {
+    flex: 1;
+    background: #999;
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+}
+
+
+/* Wireframe 2 */
+.wireframe-box-2 {
+    display: flex;
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.left-sidebar {
+    background: #800000; /* Maroon */
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+    min-width: 100px;
+    text-align: center;
+}
+
+.main {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    background: #555; /* Dark grey */
+    height: 100px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.bottom {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact, .welcome {
+    flex: 1;
+    min-width: 100px;
+    background: #999; /* Light grey */
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+}
+
+/* Mobile view adjustment */
+@media (max-width: 768px) {
+    .wireframe-box-2 {
+        flex-direction: column;
+    }
+    .bottom {
+        flex-direction: column;
+    }
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+}
+
+
+
+  

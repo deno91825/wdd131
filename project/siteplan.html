@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selfless CE Uganda Student Support Portal: Organize programs, track GPA, manage attendance, and support students and tutors effectively.">
+    <meta name="author" content="Oweki Denis">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Font Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <title>Selfless CE Uganda - Site Plan</title>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Selfless CE Uganda</div>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-desktop">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Tutors</a></li>
+            <li><a href="#">Progress</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="nav-mobile" id="mobileMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Tutors</a></li>
+            <li><a href="#">Progress</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- SITE NAME -->
+<section class="card">
+    <h2>Site Name</h2>
+    <p><strong>Selfless CE Uganda Student Support Portal</strong></p>
+    <p>This platform provides a central hub for students and tutors to access program information, track progress, and manage academic tasks efficiently.</p>
+</section>
+
+<!-- SITE PURPOSE -->
+<section class="card alt">
+    <h2>Site Purpose</h2>
+    <p>
+        The website’s main goal is to improve communication and organization by providing:
+        <ul>
+            <li>Program details and schedules for students and tutors</li>
+            <li>GPA tracking and attendance guidelines</li>
+            <li>Task management and weekly progress tracking</li>
+        </ul>
+    </p>
+</section>
+
+<!-- SCENARIOS -->
+<section class="card">
+    <h2>Scenarios</h2>
+    <ul>
+        <li>How can a student track weekly academic progress and submit tasks on time?</li>
+        <li>Where can tutors view their schedule and track student attendance?</li>
+    </ul>
+</section>
+
+<!-- COLOR SCHEMA -->
+<section class="card alt">
+    <h2>Color Schema</h2>
+    <ul>
+        <li><strong>Black (#000000):</strong> Primary background and layout</li>
+        <li><strong>Maroon (#800000):</strong> Headers, buttons, and accents</li>
+        <li><strong>White (#ffffff):</strong> Text and content areas</li>
+    </ul>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section class="card">
+    <h2>Typography</h2>
+    <p>
+        <strong>Body Font:</strong> Roboto — clean and readable for general content.<br>
+        <strong>Heading Font:</strong> Georgia — professional, clear headings.
+    </p>
+</section>
+
+<!-- WIREFRAME -->
+<section class="card alt">
+    <h2>Wireframe 2 - Layout Concept</h2>
+    <p>This wireframe shows a structured desktop layout with responsive mobile stacking:</p>
+
+    <div class="wireframe-box-2">
+        <div class="left-sidebar">Left Sidebar</div>
+        <div class="main">
+            <div class="hero">Hero Image</div>
+            <div class="bottom">
+                <div class="contact">Contact Section</div>
+                <div class="welcome">Welcome Section</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Selfless CE Uganda | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
