@@ -1,0 +1,8 @@
+@media (max-width: 480px) {
+    form {
+        gap: 0.5rem;
+    }
+    input, select, textarea {
+        padding: 0.3rem;
+    }
+}
