@@ -1,0 +1,38 @@
+@media (min-width: 556px) {
+
+    /* Show nav container */
+    .nav-menu {
+        display: block;
+        position: static;
+        height: auto;
+        width: auto;
+        background: transparent;
+    }
+
+    /* Make links appear horizontally */
+    .nav-menu ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        display: block;
+    }
+
+    .nav-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Hide hamburger */
+    .menu-toggle {
+        display: none;
+    }
+}

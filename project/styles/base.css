@@ -269,11 +269,28 @@ footer {
     background: white;
     color: black;
     padding: 3rem 1.5rem;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* container */
 .ceo-content {
     max-width: 600px;
+    flex: 1;
+}
+.ceo-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.ceo-image img {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #000;
+    border-radius: 6px;
 }
 
 /* name */
