@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/last-updated.js" defer></script>
+    <script src="scripts/about.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
 </head>
 
 <body>
@@ -38,44 +40,42 @@
     </header>
 
     <!-- MAIN -->
-    <main>
-        <section class="hero">
+     <main>
+
+        <!-- HERO -->
+        <section class="hero" style="height: 50vh;">
             <div class="overlay"></div>
-            <div class="scroll-fade"></div>
-
             <div class="hero-content">
-                <h1>Empowering Education for a Better Future</h1>
-
-                <div class="buttons">
-                    <a href="about.html" class="btn primary">About</a>
-                    <a href="contact.html" class="btn secondary">Contact</a>
-                </div>
+                <h1>Contact Us</h1>
             </div>
         </section>
 
-        <section class="ceo-section">
-            <div class="ceo-content">
-                <h2>
-                    Abraham<br>
-                    Leoxingin
-                </h2>
-                <p>
-                    Abraham Leoxingin is the founder and CEO of Selfless CE, dedicated to supporting BYU Pathway students in Uganda through education and mentorship.
-                </p>
-                <div class="ceo-image">
-                    <img src="images/abraham.webp" alt="Abraham Leoxingin" loading="lazy">
-                </div>
+        <!-- FORM SECTION -->
+        <section class="contact-section">
 
-                <div class="bio-lines">
-                    <div class="line">01. Joined the Church of LDS in 2000</div>
-                    <div class="line">02. Finished his first degree at BYU in 2009</div>
-                    <div class="line">03. Started Selfless in 2023</div>
-                </div>
-                <a href="#" class="ceo-link">
-                    About Abraham →
-                </a>
+            <div class="contact-container">
+
+                <h2>Get in Touch</h2>
+
+                <form id="contact-form">
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn primary">Send Message</button>
+
+                </form>
+
             </div>
+
         </section>
+
     </main>
 
     <!-- FOOTER -->
